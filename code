@@ -1,0 +1,82 @@
+In [0]:
+from google.colab import drive
+drive.mount('/GD')
+In [0]:
+!pip install librosa
+Requirement already satisfied: librosa in /usr/local/lib/python3.6/dist-packages (0.6.3)
+Requirement already satisfied: resampy>=0.2.0 in /usr/local/lib/python3.6/dist-packages (from librosa) (0.2.2)
+Requirement already satisfied: joblib>=0.12 in /usr/local/lib/python3.6/dist-packages (from librosa) (0.14.0)
+Requirement already satisfied: scipy>=1.0.0 in /usr/local/lib/python3.6/dist-packages (from librosa) (1.3.3)
+Requirement already satisfied: six>=1.3 in /usr/local/lib/python3.6/dist-packages (from librosa) (1.12.0)
+Requirement already satisfied: scikit-learn!=0.19.0,>=0.14.0 in /usr/local/lib/python3.6/dist-packages (from librosa) (0.21.3)
+Requirement already satisfied: numba>=0.38.0 in /usr/local/lib/python3.6/dist-packages (from librosa) (0.40.1)
+Requirement already satisfied: decorator>=3.0.0 in /usr/local/lib/python3.6/dist-packages (from librosa) (4.4.1)
+Requirement already satisfied: numpy>=1.8.0 in /usr/local/lib/python3.6/dist-packages (from librosa) (1.17.4)
+Requirement already satisfied: audioread>=2.0.0 in /usr/local/lib/python3.6/dist-packages (from librosa) (2.1.8)
+Requirement already satisfied: llvmlite>=0.25.0dev0 in /usr/local/lib/python3.6/dist-packages (from numba>=0.38.0->librosa) (0.30.0)
+In [0]:
+# Load imports
+import IPython.display as ipd
+import librosa
+import librosa.display
+import matplotlib.pyplot as plt
+In [0]:
+ipd.Audio('/GD/My Drive/.../audio/numb.m4a')
+Out[0]:
+In [0]:
+ipd.Audio('/GD/My Drive/.../audio/Michael Jackson Dangerous.m4a')
+Out[0]:
+In [0]:
+ipd.Audio('/GD/My Drive/.../audio/BlueOneLove.m4a')
+Out[0]:
+In [0]:
+# Numb - Linkin Park 
+
+filename1 = '/GD/My Drive/../audio/numb.m4a'
+plt.figure(figsize=(15,4))
+data1,sample_rate1 = librosa.load(filename1, sr=22050, mono=True, offset=0.0, duration=50, res_type='kaiser_best')
+librosa.display.waveplot(data1,sr=sample_rate1, max_points=50000.0, x_axis='time', offset=0.0, max_sr=1000)
+Out[0]:
+<matplotlib.collections.PolyCollection at 0x7f13feecc278>
+
+In [0]:
+print(data1)
+print(len(data1))
+print(sample_rate1)
+[0.         0.         0.         ... 0.12693058 0.10350046 0.28775436]
+1102500
+22050
+In [0]:
+# Dangerous - Michael Jackson
+
+filename2 = '/GD/My Drive/.../audio/Michael Jackson Dangerous.m4a'
+plt.figure(figsize=(15,4))
+data2,sample_rate2 = librosa.load(filename2, sr=22050, mono=True, offset=0.0, duration=180, res_type='kaiser_best')
+librosa.display.waveplot(data2,sr=sample_rate2, max_points=50000.0, x_axis='time', offset=0.0, max_sr=1000)
+Out[0]:
+<matplotlib.collections.PolyCollection at 0x7f13fee24898>
+
+In [0]:
+print(data2)
+print(len(data2))
+print(sample_rate2)
+[0.         0.         0.         ... 0.18555094 0.19224082 0.13644062]
+3969000
+22050
+In [0]:
+# One Love - Blue
+
+filename3 = '/GD/My Drive/.../audio/BlueOneLove.m4a'
+plt.figure(figsize=(15,4))
+data3,sample_rate3 = librosa.load(filename3, mono=True, offset=0.0, duration=180, res_type='kaiser_best')
+librosa.display.waveplot(data3,sr=sample_rate3, max_points=50000.0, x_axis='time', offset=0.0, max_sr=1000)
+Out[0]:
+<matplotlib.collections.PolyCollection at 0x7f13fed6cc18>
+
+In [0]:
+print(data3)
+print(len(data3))
+print(sample_rate3)
+[0.         0.         0.         ... 0.16682993 0.15884563 0.18074134]
+1191424
+22050
