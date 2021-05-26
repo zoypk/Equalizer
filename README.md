@@ -7,7 +7,7 @@ Long Description about project. This project do that. This project is awesome...
 ## Team Id
 
 ## Link to product walkthrough
-[link to video]
+https://drive.google.com/file/d/1FTuO5v6OqqE7yLbdBp-tARUKp7R0kUU-/view?usp=sharing
 ## How it Works ?
 1. Explaining the working of project
 2. Embed video of project demo
