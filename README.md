@@ -9,8 +9,11 @@ TeamID: BFH/recNyafBqe5eClZy5/2021
 ## Link to product walkthrough
 https://drive.google.com/file/d/1FTuO5v6OqqE7yLbdBp-tARUKp7R0kUU-/view?usp=sharing
 ## How it Works ?
-1. Explaining the working of project
-2. Embed video of project demo
+This project is coded in python.
+Its working is as simple as a nomal equilizer.
+As the user input an audio or music file then 
+this project works on that audio or music
+and equlize it with a suitable pattern
 ## Libraries used
 librosa
 jupyter
