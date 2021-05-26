@@ -15,7 +15,7 @@ As the user input an audio or music file then
 this project works on that audio or music
 and equlize it with a suitable pattern
 ## Libraries used
-librosa
+librosa,
 jupyter
 ## How to configure
 Instructions for setting up project
